@@ -1,10 +1,8 @@
 <?php
-
 /**
  * @author Mateusz Wysocki
  * @mail mateusz.wysocki53@gmail.com
  */
-
 class DBManager{
     
     /**
@@ -21,7 +19,7 @@ class DBManager{
             $conn_error = mysqli_connect_error();   // treść
             
             // W przypadku błędu, info do loga i koniec skryptu.
-            LogFile::AddLog("Nastąpił błąd połączenia [$conn_errno] z bazą danych, o treści: [ $conn_error ]" , __LINE__, __FILE__);
+			return false;
             exit();
             
         } else {
@@ -44,7 +42,6 @@ class DBManager{
         $res = $db_handle->query("$SQL_QUERY");
         
         if(!$res){            
-            LogFile::AddLog("Nastąpił błąd połączenia z bazą danych" , __LINE__, __FILE__);
             return false;           
         } else {           
             $resArr = array();
@@ -56,7 +53,6 @@ class DBManager{
         if(count($resArr)>0){     
             return $resArr;    // sprawdza czy tablica z wynikami nie jest pusta        
         } else {    
-            LogFile::AddLog("Zapytanie bazodanowe zwróciło pusty wynik" , __LINE__, __FILE__);
             return false;
         }
         
@@ -78,7 +74,6 @@ class DBManager{
         $db_handle = self::getConnection();
         
         $query = "SELECT ";
-
         if((count($COLS)) == 1){
             $query.= $COLS[0];
         } else {
@@ -103,7 +98,6 @@ class DBManager{
         $res = $db_handle->query($query);
         
         if(!$res){    
-            LogFile::AddLog("Nastąpił błąd połączenia z bazą danych" , __LINE__, __FILE__);
             return false;      
         } else {
             $resArr = array();
@@ -111,11 +105,10 @@ class DBManager{
                 $resArr[] = $row;
             }
         }
-
+        
         if(count($resArr)>0){
             return $resArr;
         } else {
-            LogFile::AddLog("Zapytanie bazodanowe zwróciło pusty wynik" , __LINE__, __FILE__);
             return false;
         }
         
@@ -159,10 +152,9 @@ class DBManager{
         $res = $db_handle->query($query);
         
         if(!$res){
-            LogFile::AddLog("Nastąpił błąd połączenia z bazą danych" , __LINE__, __FILE__);
             return false;
         } else {
-            echo 'Użytkownik dodany';
+            //echo 'Użytkownik dodany';
             return true;
         }
          
@@ -203,7 +195,6 @@ class DBManager{
         $res = $db_handle->query($query);
         
         if(!$res){
-            LogFile::AddLog("Nastąpił błąd połączenia z bazą danych" , __LINE__, __FILE__);
             return false;
         } else {
             return true;
@@ -237,11 +228,10 @@ class DBManager{
         $res = $db_handle->query($query);
         
         if(!$res){
-            LogFile::AddLog("Nastąpił błąd połączenia z bazą danych" , __LINE__, __FILE__);
             return false;
         } else {
             return true;
         }
         mysqli_close($db_handle);
     }
-} 
+}
