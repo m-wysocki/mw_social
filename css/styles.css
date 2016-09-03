@@ -34,13 +34,29 @@ body {
 }
 #logged-info {
     padding-top: 25px;
+    margin-right: -100px; 
     float: right;
     font-size: 1em;
     font-weight: bold;
+    /*border: solid red;*/
 }
 #btn-logout {
-    margin-top: 55px;
+    margin-top: 25px;
 }
+
+#logged-info-text{
+    width: 60%;
+    float: right;
+}
+
+/* --------- HEADER - AVATAR ------------ */
+#avatar{
+    padding-right: 50px;
+    width: 40%;
+    float: left;
+    /*border: solid green;*/  
+}
+
 
 /* ---------  HOME - LOGIN FORM ------------ */
 #main {
@@ -178,6 +194,7 @@ border-right: 1px solid #eee;
 
 .well #info {
     margin: 0;
+    margin-bottom: 10px;
     padding: 0;
 }
 
@@ -189,4 +206,67 @@ border-right: 1px solid #eee;
 
 #add-article-form .form-group{
     width: 700px;
+}
+
+/* --------- PROFILE PAGE ------------ */
+
+.articles .col-sm-4{
+    padding-left: 70px;
+}
+
+.articles .col-sm-8{
+    padding-left: 100px;
+}
+#info-upload{
+    color: red;
+    padding-bottom: 10px;
+}
+#profile-photo{
+    margin-left: 20px;
+}
+#add-photo-form{
+    margin-top: 25px;
+}
+#add-photo-button{
+    margin-top: 60px;
+}
+
+#user-name{
+    font-size: 2.5em;
+    /*margin-bottom: 120px;*/
+}
+
+#profile-info a{
+    font-size: 1.5em;
+}
+
+#follow-button{
+    margin-left: -20px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+/* --------- USERS LIST PAGE ------------ */
+.well{
+    padding: 15px 0 0 20px;
+    margin-left: 50px;
+}
+#list-avatar{
+    padding: 0 0 0 0;
+    margin: 0 0 0 10px;
+    /*border: solid red;*/
+}
+
+#list-name{
+    padding: 0 0 0 0;
+    margin: 30px 0 0 0;
+    /*border: solid red;*/
+}
+
+#list-name a{
+    font-size: 1.3em;
+}
+
+#list-name a:hover{
+    text-decoration: none;
 }

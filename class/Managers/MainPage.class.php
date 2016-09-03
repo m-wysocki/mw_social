@@ -15,58 +15,72 @@ class MainPage{
             case 'home':
                 require_once $this->active_page.".lib.php";
                 break;
-        }
-        
-        switch ($this->active_page){
+            
             case 'login':
                 require_once $this->active_page.".lib.php";
                 break;
-        }
-        
-        switch ($this->active_page){
+            
             case 'logout':
                 require_once $this->active_page.".lib.php";
                 break;
-        }
-        
-        switch ($this->active_page){
+            
             case 'register':
                 require_once $this->active_page.".lib.php";
                 break;
-        }
-        
-        switch ($this->active_page){
+            
             case 'articles':
                 require_once $this->active_page.".lib.php";
                 break;
-        }
-        
-        switch ($this->active_page){
-            case 'my-articles':
+            
+            case 'articles-from':
                 require_once $this->active_page.".lib.php";
                 break;
-        }
-        
-        switch ($this->active_page){
+            
             case 'read-article':
                 require_once $this->active_page.".lib.php";
                 break;
-        }
-        
-        switch ($this->active_page){
+            
             case 'add-article':
                 require_once $this->active_page.".lib.php";
                 break;
-        }
-        
-        switch ($this->active_page){
+            
             case 'adding-article':
                 require_once $this->active_page.".lib.php";
                 break;
-        }
-        
-        switch ($this->active_page){
+            
             case 'delete-article':
+                require_once $this->active_page.".lib.php";
+                break;
+            
+            case 'users-list':
+                require_once $this->active_page.".lib.php";
+                break;
+            
+            case 'profile':
+                require_once $this->active_page.".lib.php";
+                break;
+            
+            case 'adding-photo':
+                require_once $this->active_page.".lib.php";
+                break;
+            
+            case 'deleting-photo':
+                require_once $this->active_page.".lib.php";
+                break;
+
+            case 'follow':
+                require_once $this->active_page.".lib.php";
+                break;
+            
+            case 'follow-list':
+                require_once $this->active_page.".lib.php";
+                break;
+            
+            case 'follow-articles':
+                require_once $this->active_page.".lib.php";
+                break;
+            
+            case 'delete-follow':
                 require_once $this->active_page.".lib.php";
                 break;
         }
